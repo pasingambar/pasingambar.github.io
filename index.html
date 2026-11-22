@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-title="meta.title">Pasin Gambar — Kompres foto &amp; PDF pas sesuai batas ukuran</title>
+  <meta name="description" content="Aplikasi Windows untuk mengecilkan foto & PDF sampai pas dengan batas ukuran (misalnya 200 KB). 100% offline, file asli tidak diubah." />
+  <meta name="theme-color" content="#07040f" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pasin Gambar — Foto & PDF pas sesuai batas ukuran" />
+  <meta property="og:description" content="Kompres foto & PDF sampai pas dengan batas upload. 100% offline. Windows 10 & 11." />
+  <meta property="og:image" content="assets/img/og-id.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Exo+2:wght@300&display=swap" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body data-page="home">
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top"><img src="assets/img/logo.svg" alt="" width="30" height="30" /><span data-i18n="brand">Pasin Gambar</span></a>
+      <nav class="nav-links" aria-label="Menu">
+        <a href="#cara" data-i18n="nav.how">Cara kerja</a>
+        <a href="#fitur" data-i18n="nav.features">Fitur</a>
+        <a href="#harga" data-i18n="nav.pricing">Harga</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Bahasa / Language">
+        <button type="button" data-lang="id" aria-pressed="true">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn-primary" data-link="download">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+        <span data-label><span data-i18n="nav.download">Download</span></span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="pill"><b>NEW</b><span data-i18n="hero.pill">Untuk Windows 10 &amp; 11</span></div>
+          <h1><span class="grad" data-i18n="hero.title1">Foto &amp; PDF</span><br /><span data-i18n="hero.title2">pas sesuai batas ukuran.</span></h1>
+          <p class="lead" data-i18n="hero.lead">Upload ditolak karena "file maksimal 200 KB"? Taruh filenya, pilih ukuran, selesai.</p>
+          <div class="cta">
+            <a class="btn btn-primary" data-link="download">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.1 10.4 4v7.1H3zm0 13.8 7.4 1.1v-7H3zm8.3 1.2L21 21.5v-8.4h-9.7zm0-16.2v7.2H21V2.5z"/></svg>
+              <span data-label data-i18n="cta.download">Download gratis</span>
+            </a>
+            <a class="btn btn-ghost" data-link="store">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.2 11a2 2 0 0 1-2 1.8H7.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+              <span data-label data-i18n="cta.store">Microsoft Store</span>
+            </a>
+          </div>
+          <div class="trust">
+            <span><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="trust.offline">File tidak pernah diunggah</span></span>
+            <span><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="trust.original">File asli tidak diubah</span></span>
+            <span><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="trust.free">Gratis untuk dipakai</span></span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img class="laptop" src="assets/img/laptop-id.webp" data-src-id="assets/img/laptop-id.webp" data-src-en="assets/img/laptop-en.webp" alt="Pasin Gambar" data-i18n-alt="brand" width="1600" height="1008" />
+          <img class="box" src="assets/img/box-id.webp" data-src-id="assets/img/box-id.webp" data-src-en="assets/img/box-en.webp" alt="" width="760" height="1038" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF STRIP -->
+    <div class="strip">
+      <div class="wrap">
+        <div><b data-i18n="strip.1b">hemat 97%</b><span data-i18n="strip.1">dari 6,2 MB jadi 179 KB</span></div>
+        <div><b data-i18n="strip.2b">100% offline</b><span data-i18n="strip.2">diproses di komputer Anda</span></div>
+        <div><b data-i18n="strip.3b">banyak format</b><span data-i18n="strip.3">JPG · PNG · PDF · HEIC · WebP</span></div>
+        <div><b data-i18n="strip.4b">dwibahasa</b><span data-i18n="strip.4">Bahasa Indonesia &amp; Inggris</span></div>
+      </div>
+    </div>
+
+    <!-- HOW -->
+    <section id="cara">
+      <div class="wrap center">
+        <span class="eyebrow" data-i18n="how.eyebrow">Cara kerja</span>
+        <h2 data-i18n="how.title">Tiga langkah, tanpa ribet</h2>
+        <p class="lead" data-i18n="how.lead"></p>
+        <div class="steps" style="text-align:left">
+          <div class="step"><div class="n">1</div><h3 data-i18n="how.1t"></h3><p data-i18n="how.1p"></p></div>
+          <div class="step"><div class="n">2</div><h3 data-i18n="how.2t"></h3><p data-i18n="how.2p"></p></div>
+          <div class="step"><div class="n">3</div><h3 data-i18n="how.3t"></h3><p data-i18n="how.3p"></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="fitur">
+      <div class="wrap center">
+        <span class="eyebrow" data-i18n="feat.eyebrow">Fitur</span>
+        <h2 data-i18n="feat.title"></h2>
+        <p class="lead" data-i18n="feat.lead"></p>
+        <div class="features" style="text-align:left">
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/><path d="M9 12h6"/></svg></div><h3 data-i18n="feat.1t"></h3><p data-i18n="feat.1p"></p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7h11l-3-3M20 17H9l3 3"/></svg></div><h3 data-i18n="feat.2t"></h3><p data-i18n="feat.2p"></p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/><path d="M15 7h4v4M9 17H5v-4"/></svg></div><h3><span data-i18n="feat.3t"></span><span class="tag">PRO</span></h3><p data-i18n="feat.3p"></p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20c3 0 4-6 6-6s1 4 3 4 3-3 4-3 2 2 5 2"/><path d="M15 4l5 5-8 8H7v-5z"/></svg></div><h3><span data-i18n="feat.4t"></span><span class="tag">PRO</span></h3><p data-i18n="feat.4p"></p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="10" cy="9" r="1.6"/><path d="M6 17l4-4 3 3 2-2 3 3"/></svg></div><h3><span data-i18n="feat.5t"></span><span class="tag">PRO</span></h3><p data-i18n="feat.5p"></p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg></div><h3><span data-i18n="feat.6t"></span><span class="tag">PRO</span></h3><p data-i18n="feat.6p"></p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3 data-i18n="feat.7t"></h3><p data-i18n="feat.7p"></p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 14l2 2 4-4"/></svg></div><h3 data-i18n="feat.8t"></h3><p data-i18n="feat.8p"></p></div>
+          <div class="feature"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><h3><span data-i18n="feat.9t"></span><span class="tag">PRO</span></h3><p data-i18n="feat.9p"></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="harga">
+      <div class="wrap center">
+        <span class="eyebrow" data-i18n="price.eyebrow">Harga</span>
+        <h2 data-i18n="price.title"></h2>
+        <p class="lead" data-i18n="price.lead"></p>
+        <div class="plans" style="text-align:left">
+          <div class="plan">
+            <h3 data-i18n="plan.hemat">Hemat</h3>
+            <p class="for" data-i18n="plan.hematFor"></p>
+            <div class="price"><b data-i18n="plan.free">Gratis</b></div>
+            <ul>
+              <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="li.compress"></span></li>
+              <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="li.try"></span></li>
+              <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="li.offline"></span></li>
+              <li class="off"><svg viewBox="0 0 24 24"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg><span data-i18n="li.ads"></span></li>
+            </ul>
+            <a class="btn btn-ghost" data-link="download"><span data-label data-i18n="btn.download">Download gratis</span></a>
+          </div>
+          <div class="plan featured">
+            <span class="badge" data-i18n="plan.popular">Paling pas</span>
+            <h3 data-i18n="plan.unl">Unlimited</h3>
+            <p class="for" data-i18n="plan.unlFor"></p>
+            <div class="price"><b data-price="unlimited">Rp 29.000</b><s data-price="unlimitedFull" data-if-earlybird>Rp 49.000</s><small data-i18n="plan.once">sekali bayar</small></div>
+            <ul>
+              <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="li.all"></span></li>
+              <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="li.batch"></span></li>
+              <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="li.noads"></span></li>
+              <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="li.updates"></span></li>
+            </ul>
+            <a class="btn btn-primary" data-link="mayar-unlimited"><span data-label data-i18n="btn.buy">Beli Unlimited</span></a>
+          </div>
+          <div class="plan">
+            <h3 data-i18n="plan.bis">Unlimited Bisnis</h3>
+            <p class="for" data-i18n="plan.bisFor"></p>
+            <div class="price"><small data-i18n="plan.from">mulai</small><b data-price="bisnis5">Rp 150.000</b></div>
+            <ul>
+              <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="li.seats"></span></li>
+              <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="li.priority"></span></li>
+              <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="li.invoice"></span></li>
+              <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="li.org"></span></li>
+            </ul>
+            <div class="alt">
+              <a class="btn btn-ghost" data-link="mayar-bisnis5"><span data-label><span data-i18n="btn.bis5">Bisnis 5 komputer</span> · <span data-price="bisnis5"></span></span></a>
+              <a class="btn btn-ghost" data-link="mayar-bisnis10"><span data-label><span data-i18n="btn.bis10">Bisnis 10 komputer</span> · <span data-price="bisnis10"></span></span></a>
+            </div>
+          </div>
+        </div>
+        <p class="note" data-if-wa><span data-i18n="price.note"></span> <a data-link="wa" target="_blank" rel="noopener" data-i18n="price.noteWa">Chat WhatsApp</a></p>
+      </div>
+    </section>
+
+    <!-- BUY FLOW -->
+    <section id="beli">
+      <div class="wrap center">
+        <span class="eyebrow" data-i18n="buy.eyebrow"></span>
+        <h2 data-i18n="buy.title"></h2>
+        <ol class="flow" style="text-align:left">
+          <li><h3 data-i18n="buy.1t"></h3><p data-i18n="buy.1p"></p></li>
+          <li><h3 data-i18n="buy.2t"></h3><p data-i18n="buy.2p"></p></li>
+          <li><h3 data-i18n="buy.3t"></h3><p data-i18n="buy.3p"></p></li>
+          <li><h3 data-i18n="buy.4t"></h3><p data-i18n="buy.4p"></p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SMARTSCREEN -->
+    <section id="install">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow" data-i18n="ss.eyebrow"></span>
+          <h2 data-i18n="ss.title"></h2>
+          <p class="lead" data-i18n="ss.lead"></p>
+        </div>
+        <div class="guide">
+          <div class="ss" aria-hidden="true">
+            <div class="top">
+              <h4>Windows protected your PC</h4>
+              <p>Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.</p>
+              <span class="more">More info</span>
+              <p style="margin-top:16px">App: PasinGambar-Setup.exe<br />Publisher: Unknown publisher</p>
+            </div>
+            <div class="bar"><span class="run">Run anyway</span><span>Don't run</span></div>
+          </div>
+          <div>
+            <ol>
+              <li data-i18n-html="ss.1"></li>
+              <li data-i18n-html="ss.2"></li>
+              <li data-i18n="ss.3"></li>
+            </ol>
+            <p class="tip" data-i18n="ss.tip"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap center">
+        <span class="eyebrow" data-i18n="faq.eyebrow">FAQ</span>
+        <h2 data-i18n="faq.title"></h2>
+        <div class="faq" style="text-align:left">
+          <details><summary data-i18n="faq.1q"></summary><p data-i18n="faq.1a"></p></details>
+          <details><summary data-i18n="faq.2q"></summary><p data-i18n="faq.2a"></p></details>
+          <details><summary data-i18n="faq.3q"></summary><p data-i18n="faq.3a"></p></details>
+          <details><summary data-i18n="faq.4q"></summary><p data-i18n="faq.4a"></p></details>
+          <details><summary data-i18n="faq.5q"></summary><p data-i18n="faq.5a"></p></details>
+          <details><summary data-i18n="faq.6q"></summary><p data-i18n="faq.6a"></p></details>
+          <details><summary data-i18n="faq.7q"></summary><p data-i18n="faq.7a"></p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <div class="wrap">
+        <div class="card">
+          <h2 data-i18n="final.title"></h2>
+          <p class="lead" style="margin:14px auto 0" data-i18n="final.lead"></p>
+          <div class="cta">
+            <a class="btn btn-primary" data-link="download"><span data-label data-i18n="cta.download">Download gratis</span></a>
+            <a class="btn btn-ghost" data-link="store"><span data-label data-i18n="cta.store">Microsoft Store</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="jt" aria-label="JT soft"><svg viewBox="4 4 32 32"><path d="M15 7H33M15 7V33H7M24 7V33"/></svg><span>soft</span></div>
+      <nav>
+        <a href="privacy.html" data-i18n="foot.privacy">Kebijakan privasi</a>
+        <a href="activate.html" data-i18n="foot.activate">Aktivasi lisensi</a>
+        <a data-link="wa" data-wa-label target="_blank" rel="noopener">WhatsApp</a>
+        <a data-link="email"></a>
+      </nav>
+      <div>© <span data-year>2026</span> JT soft · <span data-i18n="foot.version">Versi</span> <span data-version></span></div>
+    </div>
+  </footer>
+
+  <script src="assets/config.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>

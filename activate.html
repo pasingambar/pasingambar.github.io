@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- The license key travels in the URL fragment (#k=...), which browsers never send to any server. -->
+  <meta name="referrer" content="no-referrer" />
+  <meta name="robots" content="noindex" />
+  <title data-title="ac.title">Aktifkan Pasin Gambar</title>
+  <meta name="theme-color" content="#07040f" />
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Exo+2:wght@300&display=swap" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body data-page="activate">
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="" width="30" height="30" /><span data-i18n="brand">Pasin Gambar</span></a>
+      <div class="lang" role="group" aria-label="Bahasa / Language" style="margin-left:auto">
+        <button type="button" data-lang="id" aria-pressed="true">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+    <div class="wrap">
+      <div class="panel">
+        <h1 data-i18n="ac.title">Aktifkan Pasin Gambar</h1>
+        <p style="color:var(--muted);margin:0" data-i18n="ac.lead"></p>
+        <div id="ok">
+          <a id="open" class="btn btn-primary" data-i18n="ac.open">Buka aplikasi &amp; aktifkan</a>
+          <button id="copy" type="button" class="btn btn-ghost" data-i18n="ac.copy">Salin kode</button>
+          <code id="key"></code>
+          <ol>
+            <li data-i18n="ac.s1"></li>
+            <li data-i18n="ac.s2"></li>
+            <li data-i18n="ac.s3"></li>
+          </ol>
+        </div>
+        <div id="missing" hidden>
+          <p class="error" data-i18n="ac.missing"></p>
+          <a class="btn btn-ghost" href="index.html" data-i18n="ac.back">Kembali ke beranda</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <div class="jt" aria-label="JT soft"><svg viewBox="4 4 32 32"><path d="M15 7H33M15 7V33H7M24 7V33"/></svg><span>soft</span></div>
+      <nav><a href="index.html" data-i18n="brand">Pasin Gambar</a><a href="privacy.html" data-i18n="foot.privacy">Kebijakan privasi</a><a data-link="wa" data-wa-label target="_blank" rel="noopener">WhatsApp</a><a data-link="email"></a></nav>
+      <div>&copy; <span data-year>2026</span> JT soft</div>
+    </div>
+  </footer>
+  <script src="assets/config.js"></script>
+  <script src="assets/site.js"></script>
+  <script>
+    ;(function () {
+      'use strict'
+      var site = window.__site
+      // Only key-shaped text from the fragment is accepted.
+      function keyFromHash() {
+        var params = new URLSearchParams(location.hash.replace(/^#/, ''))
+        var k = (params.get('k') || '').replace(/\s/g, '')
+        return /^[A-Za-z0-9]+1\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+$/.test(k) && k.length <= 4096 ? k : ''
+      }
+      var key = keyFromHash()
+      if (!key) {
+        document.getElementById('ok').hidden = true
+        document.getElementById('missing').hidden = false
+        return
+      }
+      document.getElementById('key').textContent = key
+      var open = document.getElementById('open')
+      var scheme = (window.SITE || {}).protocol
+      if (site.set(scheme)) open.href = scheme + '://activate?k=' + encodeURIComponent(key)
+      else open.hidden = true // not configured yet: copy/paste still works
+      var btn = document.getElementById('copy')
+      btn.addEventListener('click', function () {
+        function done() { btn.textContent = site.T[site.lang()]['ac.copied'] }
+        function legacy() {
+          var range = document.createRange()
+          range.selectNodeContents(document.getElementById('key'))
+          var sel = window.getSelection()
+          sel.removeAllRanges(); sel.addRange(range)
+          document.execCommand('copy'); done()
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(key).then(done, legacy)
+        else legacy()
+      })
+    })()
+  </script>
+</body>
+</html>
