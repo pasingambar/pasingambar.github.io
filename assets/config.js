@@ -25,7 +25,7 @@ window.SITE = {
   whatsapp: '62895639127212',
 
   // Email dukungan. Contoh: 'pasingambar@gmail.com'
-  email: 'fandyjoansyah@gmail.com',
+  email: 'pasinphotosoftware@gmail.com',
 
   // Skema link aktivasi, harus SAMA dengan `protocol` di src/shared/app-config.ts. Contoh: 'pasingambar'
   protocol: 'REPLACE_ME',
